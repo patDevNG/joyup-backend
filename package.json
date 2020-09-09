@@ -9,6 +9,9 @@
     "lint": "eslint --fix src/",
     "build": "tsc"
   },
+  "engines": {
+		"node": "12.x"
+	  },
   "author": "",
   "license": "ISC",
   "dependencies": {
