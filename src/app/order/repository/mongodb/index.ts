@@ -9,14 +9,10 @@ import { serializer } from "./serializer";
     constructor(model:ReturnModelType<typeof Orders>){
         this.model = model;
     }
-    async getOrder (merchantId: string = 'AYWSX1YB3GVH9', merchant_location_id: string = '7KHHX1RQGJFXK'){
-        console.log(merchant_location_id);
+    async getOrder (merchantId: string = '5ed17f0244a2794e36940fb1'){
+        // console.log(merchant_location_id);
         console.log(merchantId);
-        
-        
-         const orders = await this.model.find({merchant_id:merchantId, location_id:merchant_location_id});
-        //  const orders = await this.model.paginate({merchant_id:merchantId, location_id:merchant_location_id})
-        //  const orders = await this.model.paginate({});
+         const orders = await this.model.find({merchant_id:merchantId}).sort({created_at:-1});
          console.log(orders);
          
          return serializer(orders);
