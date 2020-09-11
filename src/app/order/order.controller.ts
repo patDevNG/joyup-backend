@@ -5,8 +5,8 @@ import { OrderService } from "./order.service";
 
 
 class GetOrderQuery{
-    merchantId:string;
-    locationId:string
+    merchantId: string = '5b4672ba986044252e7f14ae'
+    locationId:string ='4VGYDM4E2321G'
 }
 @injectable()
 @JsonController()
